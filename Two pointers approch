@@ -1,0 +1,21 @@
+# Two pointer algorithms
+
+arr=[1,2,3,4,5,6,7]
+l=0
+h=1
+r=len(arr)-1
+t=10
+while(l<r):
+    actual=arr[l]+arr[r]
+    if actual==t:
+        h=0
+        print("pairs of the numebrs are:",l,r)
+        break
+    elif actual<t:
+        l+=1
+    elif actual>r:
+        r-=1
+if (h==1):
+    print('There is no combination')
+the output is should be pairs of the numebrs are: 2 6
+
