@@ -1,0 +1,16 @@
+from collections import deque
+
+class stack:
+    def __init__(self):
+        self.container=deque()
+    def push(self,val):
+        self.container.append(val)
+    def pop(self,val):
+        return self.container.pop()
+    def peek(self):
+        return self.container[-1]
+S=stack()
+S.push(1)
+S.push(2)
+S.push('Vasanthraj')
+print(S.peek())
