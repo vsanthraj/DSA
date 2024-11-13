@@ -1,0 +1,29 @@
+def Hashmap(numbers):
+    # Dictionary to count occurrences of each number
+    count_numbers = {}
+    
+    # Step 1: Count occurrences of each number
+    for num in numbers:
+        if num in count_numbers:
+            count_numbers[num] += 1
+        else:
+            count_numbers[num] = 1
+    
+    # Step 2: Find the number with the highest occurrence
+    max_num = None
+    max_count = 0
+    for key, value in count_numbers.items():
+        if value > max_count:
+            max_num = key
+            max_count = value
+    
+    # Return the count dictionary, the number with the highest occurrence, and its count
+    return count_numbers, max_num, max_count
+
+# Test the function with an example input
+numbers = [1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 1, 1, 1]
+result = Hashmap(numbers)
+
+# Print the results
+print("Count of each number:", result[0])
+print(f"Number with the highest occurrence: {result[1]} (occurs {result[2]} times)")
