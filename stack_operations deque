@@ -1,0 +1,13 @@
+from collections import deque
+
+stack=deque()
+stack.append("https://www.google.com")
+stack.append("https://www.amazon.com")
+stack.append("https://www.flipkart.com")
+
+print(stack[-1])
+print(stack[-2])
+
+
+time complexity of insertion and deletion o(1)
+traversel o(n)
